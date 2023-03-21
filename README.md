@@ -230,4 +230,9 @@ Analyzing the revenue made, it can be realized that revenue made is higher when 
 It is recommended that the company’s marketing and advertisement campaigns be primarily directed towards individuals who hold positions corresponding to high revenue as per the data\
 ![image](https://user-images.githubusercontent.com/120035660/226738448-6b84d950-705b-45a3-aa6b-597f8c54382e.png)
 
+### Conclusion and recommendations
+From the aove made observations in order to improve revenues or sales it is recommended that
+* the company extends its services to these 4 discovered territories where the company is not yet present to take advantage of the market there\
+* as according to the data, the company's marketing and advertising initiatives are predominantly targeted at people who occupy jobs that are associated with significant revenue. \
+* the discovered six product that are discontinued should be reintroduced as from the made analysis they are clearly presenting a good demand base
 
