@@ -1,4 +1,4 @@
-
+						--ANALYSIS SUMMARY--
 -- 1) Getting the Top 5 selling products
 SELECT od.ProductID ,p.ProductName ,
 SUM(od.Quantity) AS Quantity
