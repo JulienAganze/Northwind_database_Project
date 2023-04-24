@@ -45,8 +45,8 @@ Let us now go straight too the different analysis carried out in our study
     GROUP BY strftime('%Y', o.OrderDate)  ;
 Using the STRFTIME function, all orders were group into years(2016-2018).
 Yearly sales was determined  by multiplying the unit price by the total quantity purchased for a particular year.\
-![image](https://user-images.githubusercontent.com/120035660/226740645-c0b7ccaf-86f0-4ec7-90b3-7c11c67390ab.png)
-
+![image](https://user-images.githubusercontent.com/120035660/226740645-c0b7ccaf-86f0-4ec7-90b3-7c11c67390ab.png).\
+From the above figure we may notice that sales incresed from 2016 to 2017 then slightly decreased in 2018. For now we don't really have an explanation for this
 
 ### 2) Top 5 Selling Products by Number
     SELECT od.ProductID ,p.ProductName ,
@@ -60,7 +60,7 @@ All products sold were group using their unique Product ID.\
 The sold quantities were obtained by adding the purchased quantities of each product together.\
 The result was ordered in a descending order, displaying only the first 5 products.\
 ![image](https://user-images.githubusercontent.com/120035660/226740543-0b11d49e-8100-46df-9da1-54fa6a6f694a.png)
-
+The top five selling products appear all to be having the number of sold product greater than 1100 products
 
 ### 3) Employee Territories
     SELECT  et.EmployeeID ,  e.FirstName ,e.LastName,
@@ -69,6 +69,7 @@ The result was ordered in a descending order, displaying only the first 5 produc
     JOIN Employees e ON e.EmployeeID = et.EmployeeID 
     GROUP BY et.EmployeeID;
 To find the number of territories for each employee, unique territory IDs assigned to each employee(ID) was counted.\
+From the table below, the territory distribution is not even for  employees.\
 ![image](https://user-images.githubusercontent.com/120035660/226740341-58268c36-a81e-4d10-8742-d1bf163ae4d6.png)
 
 ### 4) Employee Sales Quantity
@@ -81,6 +82,7 @@ To find the number of territories for each employee, unique territory IDs assign
     ORDER BY number_of_sales DESC;
 his data consist of the sum of all products sold by each employee grouped using the unique employee ID and.
 The data is ordered  from highest to lowest using the number of sales.\
+From the table below, Margaret, Janet and Nancy appear to be topping the quantity of sales.\
 ![image](https://user-images.githubusercontent.com/120035660/226740270-495f6cf1-4309-4eca-8088-d307772e0a61.png)
 
 
@@ -117,6 +119,7 @@ A comparison between the  the number of sales and number of territories for each
     LIMIT 5;
 This was obtained by using the SUM function to add all products purchased by a customer and grouped by the customer’s country.
 It was then ordered using the number of ordered items in an ascending order with only the top 5 displaying.\
+From the table below, Norway,Poland,Argentina,Portugal and Spain appear to be the countries with the least ordered items.
 ![image](https://user-images.githubusercontent.com/120035660/226739822-a1cd0080-81bf-4151-b7c2-04bf3ea88786.png)
 
 
@@ -131,6 +134,7 @@ It was then ordered using the number of ordered items in an ascending order with
     ORDER BY Number_of_Products DESC;
 This was obtained by using the count function to count all unique product IDs for each of the categories
 The result was filtered such that the products were shipped to one of the least 5 countries.\
+Categories like beverages, confections and condiments appear to be topping the list here as they have the greatest number of product available under them.\
 ![image](https://user-images.githubusercontent.com/120035660/226739696-6aa98aa3-b7c8-4dd3-89c2-f013e08d763b.png)
 
 
@@ -162,6 +166,7 @@ The result was filtered to display the top 10 products for each country.\
     ORDER BY Discount_Count DESC;
 For each country, the total number of products ordered under discount is counted using the COUNT function for the condition that discount is greater than zero(0)
 The result is ordered in descending order based on the number of products ordered under discount.\
+Countries like USA, Germany and Brasil are having the hihest number of discounted products as we can see from the figure below.\
 ![image](https://user-images.githubusercontent.com/120035660/226739493-600cec85-f70b-4d64-86bd-38332bbdab3b.png)
 
 
@@ -225,4 +230,9 @@ Analyzing the revenue made, it can be realized that revenue made is higher when 
 It is recommended that the company’s marketing and advertisement campaigns be primarily directed towards individuals who hold positions corresponding to high revenue as per the data\
 ![image](https://user-images.githubusercontent.com/120035660/226738448-6b84d950-705b-45a3-aa6b-597f8c54382e.png)
 
+### Conclusion and recommendations
+From the aove made observations in order to improve revenues or sales it is recommended that
+* the company extends its services to these 4 discovered territories where the company is not yet present to take advantage of the market there\
+* as according to the data, the company's marketing and advertising initiatives are predominantly targeted at people who occupy jobs that are associated with significant revenue. \
+* the discovered six product that are discontinued should be reintroduced as from the made analysis they are clearly presenting a good demand base
 
